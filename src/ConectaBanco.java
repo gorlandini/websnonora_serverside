@@ -24,7 +24,7 @@ public class ConectaBanco
         }
         catch(ClassNotFoundException e)
         {
-            System.out.println("O driver do Mysql n„o pode ser carregado!");
+            System.out.println("O driver do Mysql n√£o pode ser carregado!");
         }
     }
 
@@ -34,8 +34,8 @@ public class ConectaBanco
         {
             if(con == null || con.isClosed())
             {
-                con = DriverManager.getConnection("jdbc:mysql://www.websonora.com.br:3306/websonor_2012jan01", "websonor_wsuBank", "WSb@nk");
-                System.out.println("Conex„o Obtida com Sucesso");
+                con = DriverManager.getConnection("jdbc:mysql://www.websonora.com.br:3306/websonor_2012jan01", "database", "password");
+                System.out.println("Conex√£o Obtida com Sucesso");
             }
         }
         catch(SQLException e)
@@ -57,7 +57,7 @@ public class ConectaBanco
             if(con != null && !con.isClosed())
             {
                 con.close();
-                System.out.println("Conex„o Encerrada!");
+                System.out.println("Conex√£o Encerrada!");
             }
         }
         catch(SQLException e)
